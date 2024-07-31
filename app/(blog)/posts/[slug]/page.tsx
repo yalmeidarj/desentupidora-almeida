@@ -10,6 +10,9 @@ import DateComponent from "../../date";
 import MoreStories from "../../more-stories";
 import PortableText from "../../portable-text";
 
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote/rsc'
+
 import type {
   PostQueryResult,
   PostSlugsResult,
@@ -104,10 +107,29 @@ export default async function PostPage({ params }: Props) {
           </div>
         </div>
         {post.content?.length && (
+          <>
+          {
+              post.content.map((block) => {
+              console.log(block)
+              console.log(block.children)
+              return null
+            }
+            )
+          }    
           <PortableText
             className="mx-auto max-w-2xl"
             value={post.content as PortableTextBlock[]}
-          />
+            />
+            </>
+
+          // <MDXRemote
+          //   source={post.content.children?.marks}
+          //   />
+
+            // post.content.map((block) => {
+            //   return <MDXRemote source={block.children?.text} />
+            // })
+          
         )}
       </article>
       <aside>
