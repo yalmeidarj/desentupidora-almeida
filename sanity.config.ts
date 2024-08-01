@@ -13,6 +13,8 @@ import {
 } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
 
+import {ptBRLocale} from '@sanity/locale-pt-br'
+
 import { apiVersion, dataset, projectId, studioUrl } from "@/sanity/lib/api";
 import { pageStructure, singletonPlugin } from "@/sanity/plugins/settings";
 import { assistWithPresets } from "@/sanity/plugins/assist";
@@ -72,6 +74,9 @@ export default defineConfig({
         },
       },
       previewUrl: { previewMode: { enable: "/api/draft" } },
+    }),
+    ptBRLocale({
+      title: "Portuguese (Brazil)",
     }),
     structureTool({ structure: pageStructure([settings]) }),
     // Configures the global "new document" button, and document actions, to suit the Settings document singleton
