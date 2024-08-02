@@ -86,18 +86,19 @@ export default function Footer() {
                         Nós resolvemos qualquer tipo de entupimento para você
                     </p>
                     <div className="flex items-center gap-3">
-                        <Link href="#" aria-label="Twitter" className="text-darkTheme-text hover:text-primary transition-colors" prefetch={false}>
+                        <Link href="#" aria-label="Twitter" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
                             <CiPhone className="h-5 w-5" />
                         </Link>
-                        <Link href="#" aria-label="GitLab" className="text-darkTheme-text hover:text-primary transition-colors" prefetch={false}>
+                        <Link href="#" aria-label="GitLab" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
                             <FaWhatsapp className="h-5 w-5" />
                         </Link>
-                        <Link href="#" aria-label="LinkedIn" className="text-darkTheme-text hover:text-primary transition-colors" prefetch={false}>
+                        <Link href="#" aria-label="LinkedIn" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
                             <CiMail className="h-5 w-5" />
                         </Link>
                     </div>
+
                 </div>
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-1">
+                <div className=" grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-1">
                     {subLinks.map((subLink) => (
                         <SubLink key={subLink.title} title={subLink.title} links={subLink.links} />
                     ))}
@@ -138,10 +139,10 @@ type SubLinkProps = {
 function SubLink({ title, links }: SubLinkProps) {
     return (
         <div className="">
-            <h4 className="text-sm font-medium">{title}</h4>
+            <h4 className="text-sm font-medium text-darkTheme-primary">{title}</h4>
             <nav className="space-x-2">
                 {links.map((link) => (
-                    <Link key={link.title} href={link.url} className="text-sm text-darkTheme-text hover:text-primary transition-colors" prefetch={false}>
+                    <Link key={link.title} href={link.url} className="text-sm text-darkTheme-text hover:text-darkTheme-outerWave transition-colors" prefetch={false}>
                         {link.title}
                     </Link>
                 ))}

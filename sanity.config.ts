@@ -13,6 +13,7 @@ import {
 } from "sanity/presentation";
 import { structureTool } from "sanity/structure";
 
+import { simplerColorInput } from 'sanity-plugin-simpler-color-input'
 import {ptBRLocale} from '@sanity/locale-pt-br'
 
 import { apiVersion, dataset, projectId, studioUrl } from "@/sanity/lib/api";
@@ -77,6 +78,18 @@ export default defineConfig({
     }),
     ptBRLocale({
       title: "Portuguese (Brazil)",
+    }),
+    simplerColorInput({
+      // Note: These are all optional
+      defaultColorFormat: 'rgba',
+      defaultColorList: [
+        { label: 'Light', value: '#ffffff' },
+        { label: 'Dark', value: '#333333' },
+        { label: 'Brand', value: '#ca786d' },
+        { label: 'Accent', value: '#626754' },
+        { label: 'Custom...', value: 'custom' },
+      ],
+      enableSearch: true,
     }),
     structureTool({ structure: pageStructure([settings]) }),
     // Configures the global "new document" button, and document actions, to suit the Settings document singleton

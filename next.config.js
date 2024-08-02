@@ -7,4 +7,12 @@ module.exports = {
   logging: {
     fetches: { fullUrl: false },
   },
+  async rewrites() {
+    return [
+      {
+        source: "/sitemap.xml",
+        destination: "/sitemap.ts",
+      },
+    ];
+  },
 };

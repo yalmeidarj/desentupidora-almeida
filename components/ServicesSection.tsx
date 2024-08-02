@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { FaToilet } from "react-icons/fa6";
 import { MdOutlinePlumbing } from "react-icons/md";
@@ -12,12 +13,16 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title }) => {
     return (
-        <div className="flex flex-col items-center justify-center bg-blue-600 text-white p-6 rounded-lg shadow-md w-full sm:w-1/2 md:w-1/5 h-[12rem] m-2">
-            <div className="text-4xl mb-4">{icon}</div>
+        <Link
+            href="/services"
+            className="group flex flex-col items-center justify-center bg-darkTheme-bg text-darkTheme-text p-6 rounded-lg shadow-md w-full sm:w-1/2 md:w-1/5 h-[12rem] m-2 transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-darkTheme-accent"
+        >
+            <div className="group-hover:bg-darkTheme-bg rounded-full p-4 text-4xl mb-4">{icon}</div>
             <h3 className="text-lg font-bold">{title}</h3>
-        </div>
+        </Link>
     );
 };
+
 
 const ServicesSection: React.FC = () => {
     return (
