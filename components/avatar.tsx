@@ -15,9 +15,9 @@ export default function Avatar({ name, picture }: Props) {
         <div className="mr-4 h-12 w-12">
           <Image
             alt={picture?.alt || ""}
-            className="h-full rounded-full object-cover"
-            height={48}
-            width={48}
+            className="h-full rounded-full object-cover border-2 p-1 border-darkTheme-bg w-12"
+            height={38}
+            width={38}
             src={
               urlForImage(picture)
                 ?.height(96)

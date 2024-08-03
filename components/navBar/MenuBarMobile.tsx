@@ -15,13 +15,14 @@ export default function MenuBarMobile({ setter }: MenuBarMobileProps): ReactElem
 
     
     return (
-        <nav className="fixed top-0 left-0 right-0 h-[100px] bg-darkTheme-bg flex justify-between items-center z-60 px-4 mb-8">
+        <nav className="fixed top-0 left-0 right-0 h-[120px] bg-darkTheme-bg ">
+            <div className='container flex justify-between items-center z-60 px-4 mb-8'>
             <Link href="/" className="flex items-center text-3xl text-white">
                 <Image
                     src="/logo-desentupidora-light.png"
                     alt="Logo da Desentupidora Almeida"
-                    width={120}
-                    height={120}
+                    width={100}
+                    height={100}
                 />
             </Link>
             <div className="flex items-center justify-between gap-8 py-1">
@@ -50,6 +51,7 @@ export default function MenuBarMobile({ setter }: MenuBarMobileProps): ReactElem
                         </Link>
                     ))}
                 </div>
+            </div>
             </div>
         </nav>
     );

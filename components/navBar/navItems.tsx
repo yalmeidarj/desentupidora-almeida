@@ -9,8 +9,8 @@ import { FaBlog, FaUser } from 'react-icons/fa';
 export const navItems = [
     { name: "Home", route: "/", icon: <SlHome /> },
     { name: "Serviços", route: "/serviços", icon: <MdOutlinePlumbing /> },
-    { name: "Onde Atendemos", route: "/areas-de-atendimento", icon: <MdOutlineMapsHomeWork /> },
-    { name: "Sobre nós", route: "/sobre-a-desentupidora-almeida", icon: <BsInfoSquare /> },
-    { name: "Contato", route: "/contato", icon: <RiContactsBookUploadLine /> },
+    { name: "Onde Atendemos", route: "/onde-atendemos", icon: <MdOutlineMapsHomeWork /> },
+    { name: "Sobre nós", route: "/sobre-a-desentupidora-renovo", icon: <BsInfoSquare /> },
+    { name: "Contato", route: "/fale-com-a-desentupidora-renovo", icon: <RiContactsBookUploadLine /> },
     { name: "Blog", route: "/blog", icon: <FaBlog /> },
 ]

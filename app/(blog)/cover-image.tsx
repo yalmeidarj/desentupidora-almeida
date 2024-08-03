@@ -1,5 +1,4 @@
 import { Image } from "next-sanity/image";
-
 import { urlForImage } from "@/sanity/lib/utils";
 
 interface CoverImageProps {
@@ -12,15 +11,15 @@ export default function CoverImage(props: CoverImageProps) {
   const image = source?.asset?._ref ? (
     <Image
       className="h-auto w-full"
-      width={2000}
-      height={1000}
+      width={1200}
+      height={800}
       alt={source?.alt || ""}
-      src={urlForImage(source)?.height(1000).width(2000).url() as string}
-      sizes="100vw"
+      src={urlForImage(source)?.height(800).width(1200).url() as string}
+      sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
       priority={priority}
     />
   ) : (
-    <div className="bg-slate-50" style={{ paddingTop: "50%" }} />
+    <div className="bg-slate-50" style={{ paddingTop: "66.66%" }} />
   );
 
   return (
@@ -29,3 +28,4 @@ export default function CoverImage(props: CoverImageProps) {
     </div>
   );
 }
+

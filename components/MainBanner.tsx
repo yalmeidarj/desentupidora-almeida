@@ -23,7 +23,7 @@ const MainBanner = () => {
                     Chame quem resolve!
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center mb-4 sm:mb-6 md:mb-8 drop-shadow-lg">
-                    Desentupidora Almeida é a melhor opção para desentupimento.
+                    A Desentupidora Renovo é a melhor opção para desentupimento.
                 </p>
                 <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 rounded-full transition-transform transform hover:scale-105">
                     Chamar Agora

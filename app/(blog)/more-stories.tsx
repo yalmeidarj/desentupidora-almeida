@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import Avatar from "./avatar";
+import Avatar from "../../components/avatar";
 import CoverImage from "./cover-image";
 import DateComponent from "./date";
 

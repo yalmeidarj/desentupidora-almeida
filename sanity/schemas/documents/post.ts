@@ -24,7 +24,7 @@ export default defineType({
   fields: [
     defineField({
       name: "title",
-      title: "Title",
+      title: "Título",
       type: "string",
       validation: (rule) => rule.required(),
     }),
@@ -32,7 +32,9 @@ export default defineType({
       name: "slug",
       title: "Slug",
       type: "slug",
-      description: "A slug is required for the post to show up in the preview",
+      description:
+        "Um slug é necessário para que o post apareça na pré-visualização",
+      
       options: {
         source: "title",
         maxLength: 96,
@@ -42,7 +44,7 @@ export default defineType({
     }),
     defineField({
       name: "content",
-      title: "Content",
+      title: "Conteúdo",
       type: "array",
       of: [{ type: "block" }],
     }),
@@ -53,20 +55,20 @@ export default defineType({
     }),
     defineField({
       name: "coverImage",
-      title: "Cover Image",
+      title: "Imagem de capa",
       type: "image",
       options: {
         hotspot: true,
         aiAssist: {
-          imageDescriptionField: "alt",
+          imageDescriptionField: "Uma explicação da imagem",
         },
       },
       fields: [
         {
           name: "alt",
           type: "string",
-          title: "Alternative text",
-          description: "Important for SEO and accessiblity.",
+          title: "Texto alternativo",
+          description: "Importante para acessibilidade e SEO",
           validation: (rule) => {
             return rule.custom((alt, context) => {
               if ((context.document?.coverImage as any)?.asset?._ref && !alt) {
@@ -81,13 +83,13 @@ export default defineType({
     }),
     defineField({
       name: "date",
-      title: "Date",
+      title: "Data",
       type: "datetime",
       initialValue: () => new Date().toISOString(),
     }),
     defineField({
       name: "author",
-      title: "Author",
+      title: "Autor do post",
       type: "reference",
       to: [{ type: authorType.name }],
     }),

@@ -15,8 +15,8 @@ import Footer from "../components/footer/Footer";
 
 export async function generateMetadata(): Promise<Metadata> {
 
-  const title = "Desentupidora Almeida";
-  const description = " Desentupidora Almeida é uma empresa especializada em desentupimento.";
+  const title = "Desentupidora Renovo";
+  const description = " Desentupidora Renovo é uma empresa especializada em desentupimento.";
 
   return {
     title: {
@@ -34,7 +34,6 @@ const inter = Inter({
 });
 
 
-
 export default function RootLayout({
   children,
 }: {
@@ -44,10 +43,9 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${inter.variable} `}>
       <body className='bg-darkTheme-mainBg '>
         <section className=" gap-4 min-h-screen flex flex-col justify-between">
-          
           <NavBar />
             {draftMode().isEnabled && <AlertBanner />}
-          <div className='pt-12 mt-16'>
+          <div className='container pt-12 mt-16'>
           <Suspense>
             {children}
           </Suspense>
