@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { navItems } from './navItems';
 import { FiMenu } from 'react-icons/fi';
+import CallLandLineButton from '../CallLandLineButton';
+import { FaRegClock } from "react-icons/fa";
 
 interface MenuBarMobileProps {
     setter: React.Dispatch<React.SetStateAction<boolean>>;
@@ -15,7 +17,20 @@ export default function MenuBarMobile({ setter }: MenuBarMobileProps): ReactElem
 
     
     return (
-        <nav className="fixed top-0 left-0 right-0 h-[120px] bg-darkTheme-bg ">
+        <nav className="fixed top-0 left-0 right-0 h-[175px] md:h-[145px] bg-darkTheme-bg  ">
+            <div className='container flex flex-col mt-2'>
+                <div className='flex justify-between  items-center '>
+                    <div className='ml-6 flex items-center gap-2 text-darkTheme-text w-3/4'>
+                        <FaRegClock className=' text-darkTheme-accent' />                        
+                        <span className=''>Atendimento rápido 24hrs</span>
+                        
+                    </div>
+                    <div className=' block lg:hidden'>
+                    <CallLandLineButton
+                            phoneNumber="4042-1046"                    
+                    />
+                    </div>
+                </div>
             <div className='container flex justify-between items-center z-60 px-4 mb-8'>
             <Link href="/" className="flex items-center text-3xl text-white">
                 <Image
@@ -25,6 +40,12 @@ export default function MenuBarMobile({ setter }: MenuBarMobileProps): ReactElem
                     height={100}
                 />
             </Link>
+                    <div className=' hidden lg:flex'>
+                        
+                    <CallLandLineButton
+                            phoneNumber="4042-1046"                    
+                        />
+                        </div>
             <div className="flex items-center justify-between gap-8 py-1">
                 <button
                     className="block md:hidden text-4xl text-white"
@@ -53,25 +74,7 @@ export default function MenuBarMobile({ setter }: MenuBarMobileProps): ReactElem
                 </div>
             </div>
             </div>
+            </div>
         </nav>
     );
-}
-
-function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-        </svg>
-    )
 }

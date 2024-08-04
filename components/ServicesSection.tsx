@@ -14,7 +14,7 @@ interface ServiceCardProps {
 const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title }) => {
     return (
         <Link
-            href="/services"
+            href="/desentupimentos"
             className="group flex flex-col items-center justify-center bg-darkTheme-bg text-darkTheme-text p-6 rounded-lg shadow-md w-full sm:w-1/2 md:w-1/5 h-[12rem] m-2 transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-darkTheme-accent"
         >
             <div className="group-hover:bg-darkTheme-bg rounded-full p-4 text-4xl mb-4">{icon}</div>
@@ -26,14 +26,16 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title }) => {
 
 const ServicesSection: React.FC = () => {
     return (
-        <section className="py-16 bg-gray-100">
+        <section className=" w-full py-16 bg-gray-100">
+            <div className='container '>            
+            
             <h2 className="text-3xl font-bold text-center mb-12">
                 Serviços Desentupimento no Rio de Janeiro
             </h2>
             <div className="flex flex-wrap justify-center items-center">
                 <ServiceCard
                     icon={<PiPipe className="fas fa-tools"/>}
-                    title="Entupimento de Canos"
+                    title="Desentupimento de Canos"
                 />
                 <ServiceCard
                     icon={<MdOutlinePlumbing className="fas fa-wrench" />}
@@ -48,6 +50,7 @@ const ServicesSection: React.FC = () => {
                     title="Limpeza de Esgoto"
                 />
             </div>
+            </div>                
         </section>
     );
 };

@@ -30,13 +30,13 @@ export default function Footer() {
                     </Link>
 
                     <div className="flex items-center gap-3">
-                        <Link href="#" aria-label="Twitter" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
+                        <Link href="tel:+552140421046" aria-label="Telefone" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
                             <CiPhone className="h-5 w-5" />
                         </Link>
-                        <Link href="#" aria-label="GitLab" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
+                        <Link href="https://wa.me/5521966495454" aria-label="Whatsapp" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
                             <FaWhatsapp className="h-5 w-5" />
                         </Link>
-                        <Link href="#" aria-label="LinkedIn" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
+                        <Link href="mailto:desentupidorarenovo.rj@gmail.com" aria-label="Email" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
                             <CiMail className="h-5 w-5" />
                         </Link>
                     </div>

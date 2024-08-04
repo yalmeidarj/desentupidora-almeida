@@ -82,35 +82,35 @@ export const subLinks = [
     links: [
       {
         title: "-Desentupimento Comercial",
-        url: "/serviços/desentupimento-comercial",
+        url: "/desentupimentos/desentupimento-comercial",
       },
       {
         title: "-Desentupimento Residencial",
-        url: "/serviços/desentupimento-residencial",
+        url: "/desentupimentos/desentupimento-residencial",
       },
       {
         title: "-Desentupimento Emergencial",
-        url: "/serviços/desentupimento-emergencial",
+        url: "/desentupimentos/desentupimento-emergencial",
       },
       {
         title: "-Desentupimento de Esgoto",
-        url: "/serviços/desentupimento-de-esgoto",
+        url: "/desentupimentos/desentupimento-de-esgoto",
       },
       {
         title: "-Desentupimento de Pia",
-        url: "/serviços/desentupimento-de-pia",
+        url: "/desentupimentos/desentupimento-de-pia",
       },
       {
         title: "-Desentupimento de Vaso Sanitário",
-        url: "/serviços/desentupimento-de-vaso-sanitario",
+        url: "/desentupimentos/desentupimento-de-vaso-sanitario",
       },
       {
         title: "-Ralo Entupido",
-        url: "/serviços/ralo-entupido",
+        url: "/desentupimentos/desentupimento-de-ralo-entupido",
       },
       {
         title: "-Desentupimento de Caixa de Gordura",
-        url: "/serviços/desentupimento-de-caixa-de-gordura",
+        url: "/desentupimentos/desentupimento-de-caixa-de-gordura",
       },
     ],
   },

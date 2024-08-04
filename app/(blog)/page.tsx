@@ -3,6 +3,7 @@ import ServicesSection from "../../components/ServicesSection";
 import { IoIosMail, IoLogoWhatsapp } from "react-icons/io";
 import { FaPhone } from "react-icons/fa6";
 import { Button } from "../../components/ui/button";
+import CTA from "@/components/cta";
 
 
 const SobreNos: React.FC = () => {
@@ -28,7 +29,7 @@ const SobreNos: React.FC = () => {
           <IoIosMail className="text-gray-300 " />
             
           </div>
-          <div className="mt-8">
+          {/* <div className="mt-8">
             <Button
               className="bg-darkTheme-bg text-darkTheme-text
               hover:bg-darkTheme-accent hover:text-darkTheme-text transition-color
@@ -39,7 +40,8 @@ const SobreNos: React.FC = () => {
               </span>
             </Button>
 
-          </div>
+          </div> */}
+          <CTA />
         </div>
       </div>
     </section>

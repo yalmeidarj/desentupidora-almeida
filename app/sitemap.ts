@@ -15,9 +15,12 @@ async function getData() {
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const data = await getData();
+  
+
+  
   const posts: MetadataRoute.Sitemap = data.map((post: SanityDocument) => ({
     url: `http://desentupidorarenovo.com.br/posts/${post.currentSlug}`,
-    lastModified: post.lastModified,
+    lastModified: post.updated,
     changeFrequency: "weekly",
     priority: 0.9,
   }));
@@ -34,6 +37,56 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
+    },
+
+    // Services
+    {
+      url: "/desentupimentos/desentupimento-comercial",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "/desentupimentos/desentupimento-residencial",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "/desentupimentos/desentupimento-emergencial",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "/desentupimentos/desentupimento-de-esgoto",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "/desentupimentos/desentupimento-de-pia",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "/desentupimentos/desentupimento-de-vaso-sanitario",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "/desentupimentos/desentupimento-de-ralo-entupido",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: "/desentupimentos/desentupimento-de-caixa-de-gordura",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
 
     ...posts,

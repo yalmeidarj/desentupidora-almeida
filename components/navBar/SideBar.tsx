@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { BsEnvelopeAt } from 'react-icons/bs'
 import { navItems } from './navItems'
 
@@ -18,7 +18,7 @@ interface MenuItemProps {
 }
 
 const SideBar: React.FC<SidebarProps> = ({ show, setter }) => {
-    const router = useRouter();
+
     const pathname = usePathname();
 
 
@@ -56,7 +56,7 @@ const SideBar: React.FC<SidebarProps> = ({ show, setter }) => {
 
     return (
         <>
-            <div className={`${className}${appendClass} mt-[6rem] fixed flex flex-col justify-between `}>
+            <div className={`${className}${appendClass} mt-[10rem] fixed flex flex-col justify-between `}>
                 <div className="flex flex-col">{navItems.map((item, index) => (
                     <MenuItem
                         key={index}
@@ -68,8 +68,8 @@ const SideBar: React.FC<SidebarProps> = ({ show, setter }) => {
                 </div>
                 <div className="mt-auto">
                     <MenuItem
-                        name="Contact"
-                        route="/contact"
+                        name="Contato"
+                        route="/fale-com-a-desentupidora-renovo"
                         icon={<BsEnvelopeAt />}
                     />
                 </div>
@@ -79,25 +79,5 @@ const SideBar: React.FC<SidebarProps> = ({ show, setter }) => {
         </>
     )
 }
-
-function MountainIcon(props: React.SVGProps<SVGSVGElement>) {
-    return (
-        <svg
-            {...props}
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-        >
-            <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-        </svg>
-    )
-}
-
 
 export default SideBar;

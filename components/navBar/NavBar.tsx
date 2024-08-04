@@ -21,7 +21,7 @@ export default function NavBar({ pageTitle }: NavBarProps) {
             {/* <Head>
                 <title>{titleConcat}</title>
             </Head> */}
-            <div className=" z-50 fixed w-full">
+            <div className=" z-50 fixed w-full ">
                 <div className="flex">
                     <MenuBarMobile setter={setShowSidebar} />
                     <SideBar show={showSidebar} setter={setShowSidebar} />
