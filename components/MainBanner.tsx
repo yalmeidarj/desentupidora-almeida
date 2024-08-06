@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import CallLandLineButton from './CallLandLineButton';
 
 const MainBanner = () => {
     return (
@@ -10,10 +11,11 @@ const MainBanner = () => {
                 alt="Plumber working"
                 // width={771}
                 // height={281}
-                width={1928}
-                height={704}
-                layout="responsive"
-                quality={100}
+                width={968}
+                height={506}
+                sizes="(max-width: 768px) 100vw, 768px"
+                // quality={100}
+                loading='eager'
                 className="w-full h-full object-cover"
             />
             {/* Overlay for the CTA */}
@@ -25,9 +27,11 @@ const MainBanner = () => {
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-center mb-4 sm:mb-6 md:mb-8 drop-shadow-lg">
                     A Desentupidora Renovo é a melhor opção para desentupimento.
                 </p>
-                <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 rounded-full transition-transform transform hover:scale-105">
-                    Chamar Agora
-                </button>
+                <CallLandLineButton
+                    phoneNumber="4042-1046"
+                    label='Ligue Agora'
+
+                />
             </div>
         </div>
     );

@@ -59,7 +59,10 @@
   }
 }
 
-
+body {
+  background-color: "#f4f4f4";
+  color: hsl(var(--foreground));
+}
 
 @layer base {
   * {

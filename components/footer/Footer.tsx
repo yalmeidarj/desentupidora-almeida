@@ -7,10 +7,8 @@ import { CiMail, CiPhone } from "react-icons/ci";
 import { subLinks, areaAtendimento } from "./const";
 
 export default function Footer() {
-
     // get the current year
     const currentYear = new Date().getFullYear();
-
 
     return (
         <footer className="w-full space-y-4 bg-darkTheme-secondary text-darkTheme-muted pt-6">
@@ -19,14 +17,11 @@ export default function Footer() {
                     <Link href="#" className="flex items-center" aria-label="Acme Inc logo" prefetch={false}>
                         <Image
                             src="/logo-desentupidora-light.png"
-                            alt="Desentupidora Almeida"
+                            alt="Logo da Desentupidora Renovo"
                             width={140}
                             height={140}
                             className="rounded-full"
-                        >
-
-                        </Image>
-                        {/* <span className="text-lg font-semibold">Desentupidora Almeida</span> */}
+                        />
                     </Link>
 
                     <div className="flex items-center gap-3">
@@ -40,41 +35,33 @@ export default function Footer() {
                             <CiMail className="h-5 w-5" />
                         </Link>
                     </div>
-
                 </div>
-                <div className=" grid grid-cols-1 gap-6">
+
+                <nav className="grid grid-cols-1 gap-6">
                     {subLinks.map((subLink) => (
                         <SubLink key={subLink.title} title={subLink.title} links={subLink.links} />
                     ))}
-                </div>
+                </nav>
+
                 <div className="">
-                <p className="text-darkTheme-text">
-                    Nós resolvemos qualquer tipo de entupimento para você
-                </p>
+                    <p className="text-darkTheme-text">
+                        Nós resolvemos qualquer tipo de entupimento para você
+                    </p>
                 </div>
-                {/* <div className="space-y-4">                    
-                    <form className="flex gap-2">
-                        <Input type="text" placeholder="Buscar por termo" className="flex-1" />
-                        <Button type="submit">Procurar</Button>
-                    </form>
-                    <p className="text-xs text-darkTheme-text">Ainda não encontrou? Procure em nosso site</p>
-                </div> */}
             </div>
+
             <AreaAtendimento />
-            <div className="container mx-auto mt-12 flex flex-col items-center justify-between gap-4 text-xs text-darkTheme-text md:flex-row ">
+
+            <div className="container mx-auto mt-12 flex flex-col items-center justify-between gap-4 text-xs text-darkTheme-text md:flex-row">
                 <p>&copy; {currentYear.toLocaleString()} All rights reserved.</p>
                 <nav className="flex items-center gap-4">
                     <Link href="#" className="hover:text-primary transition-colors" prefetch={false}>
                         Privacy Policy
                     </Link>
                 </nav>
-                {/* <p>Made with ❤️in NYC © 2024 Codecademy</p> */}
-                <p
-                    className="text-lg"
-                >🖮 <Link
-                    className="text-xs"
-                    target="_blank" rel="noopener noreferrer"
-                    href="https://yalmeida.vercel.app">Check the dev</Link> </p>
+                <p className="text-lg">
+                    🖮 <Link className="text-xs" target="_blank" rel="noopener noreferrer" href="https://yalmeida.vercel.app">Check the dev</Link>
+                </p>
             </div>
         </footer>
     );
@@ -87,15 +74,19 @@ type SubLinkProps = {
 
 function SubLink({ title, links }: SubLinkProps) {
     return (
-        <div className="">
-            <h4 className="text-sm font-medium text-darkTheme-primary">{title}</h4>
-            <nav className="space-x-2">
+        <div className="text-md ">
+            <h3 className="font-medium text-darkTheme-primary">{title}</h3>
+            <nav className="space-x-3 my-3">
+                <ul>
+                    <li  className="flex flex-wrap">
                 {links.map((link) => (
-                    <Link key={link.title} href={link.url} className="text-sm text-darkTheme-text hover:text-darkTheme-outerWave transition-colors" prefetch={false}>
+                    <Link key={link.title} href={link.url} className=" text-lg text-darkTheme-text hover:text-darkTheme-outerWave transition-colors" prefetch={false}>
                         {link.title}
                     </Link>
                 ))}
-            </nav >
+                </li>
+                </ul>  
+            </nav>
         </div>
     );
 }
@@ -103,11 +94,11 @@ function SubLink({ title, links }: SubLinkProps) {
 function AreaAtendimento() {
     return (
         <div className="container mx-auto flex flex-col items-center gap-4">
-            <h4 className="text-sm font-bold text-darkTheme-primary">Desentupimos 24h no RJ</h4>
+            <h3 className="text-sm font-bold text-darkTheme-primary">Desentupimos 24h no RJ</h3>
             <ol className="flex flex-wrap gap-2">
-            {areaAtendimento.map((area: string) => (
-                <li key={area} className="text-xs text-darkTheme-text">{area}</li>
-            ))}
+                {areaAtendimento.map((area: string) => (
+                    <li key={area} className="text-sm text-darkTheme-text">{area}</li>
+                ))}
             </ol>
         </div>
     );

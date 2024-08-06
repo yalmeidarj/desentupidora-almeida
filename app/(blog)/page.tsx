@@ -1,9 +1,25 @@
 import MainBanner from "../../components/MainBanner";
 import ServicesSection from "../../components/ServicesSection";
 import { IoIosMail, IoLogoWhatsapp } from "react-icons/io";
-import { FaPhone } from "react-icons/fa6";
-import { Button } from "../../components/ui/button";
+
 import CTA from "@/components/cta";
+import CallLandLineButton from "@/components/CallLandLineButton";
+import { CiMail, CiPhone } from "react-icons/ci";
+import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa6";
+
+export default async function Page() {
+
+  return (
+    <main className="min-h-screen">      
+      <div className=" flex flex-col items-center justify-center  ">
+      <MainBanner /> 
+      <ServicesSection />
+        <SobreNos />
+      </div>
+    </main>
+  );
+}
 
 
 const SobreNos: React.FC = () => {
@@ -24,41 +40,30 @@ const SobreNos: React.FC = () => {
           <p className="text-gray-700 mb-6">
             Entre em contato e veja como podemos ajudar.
           </p>
-          <div className="flex flex-row gap-2 text-3xl">
-          <IoLogoWhatsapp className="text-green-300 " />
-          <IoIosMail className="text-gray-300 " />
-            
+          <div className="flex items-center gap-3 mb-8">
+            <Link href="tel:+552140421046" aria-label="Telefone" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
+              <CiPhone className="h-5 w-5" />
+            </Link>
+            <Link href="https://wa.me/5521966495454" aria-label="Whatsapp" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
+              <FaWhatsapp className="h-5 w-5" />
+            </Link>
+            <Link href="mailto:desentupidorarenovo.rj@gmail.com" aria-label="Email" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
+              <CiMail className="h-5 w-5" />
+            </Link>
           </div>
           {/* <div className="mt-8">
-            <Button
-              className="bg-darkTheme-bg text-darkTheme-text
-              hover:bg-darkTheme-accent hover:text-darkTheme-text transition-color
-              flex flex-row gap-4">
-              <FaPhone className="text-gray-300 " />
-              <span>
-              Ligue Agora
-              </span>
-            </Button>
+            <CallLandLineButton
+              phoneNumber="4042-1046"             
+            />
 
           </div> */}
-          <CTA />
+          <CTA
+            title="Precisa desentupir?"
+            description="Entre em contato conosco e solicite um orçamento sem compromisso."            
+           />
         </div>
       </div>
     </section>
   );
 };
-
-
-export default async function Page() {
-
-  return (
-    <main className="min-h-screen">      
-      <div className=" flex flex-col items-center justify-center  ">
-      <MainBanner /> 
-      <ServicesSection />
-        <SobreNos />
-      </div>
-    </main>
-  );
-}
 

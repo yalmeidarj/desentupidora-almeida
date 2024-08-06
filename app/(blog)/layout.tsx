@@ -1,15 +1,7 @@
 import "../globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import {
-    VisualEditing,
-    toPlainText,
-} from "next-sanity";
 import { Inter } from "next/font/google";
-import { draftMode } from "next/headers";
 import { Suspense } from "react";
-
-import AlertBanner from "../../app/(blog)/alert-banner";
 import NavBar from "../../components/navBar/NavBar";
 import Footer from "../../components/footer/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -57,7 +49,6 @@ export default function Layout({
                     <WhatsAppButton />                    
                 </div>
                 {/* {draftMode().isEnabled && <VisualEditing  />} */}
-                <SpeedInsights />
             </body>
 
         </html>

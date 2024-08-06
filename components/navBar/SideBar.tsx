@@ -22,7 +22,7 @@ const SideBar: React.FC<SidebarProps> = ({ show, setter }) => {
     const pathname = usePathname();
 
 
-    const className = "bg-darkTheme-bg w-[250px] transition-[margin-left] ease-in-out duration-500  top-0 bottom-0 right-0 ";
+    const className = "bg-darkTheme-bg border border-solid border-white w-[250px] transition-[margin-left] ease-in-out duration-500  top-0 bottom-0 right-0 ";
     // const className = "bg-black w-[250px] transition-[margin-left] ease-in-out duration-500 fixed md:static top-0 bottom-0 left-0 z-40";
     const appendClass = show ? " mr-0" : " mr-[-250px]";
 
@@ -56,7 +56,7 @@ const SideBar: React.FC<SidebarProps> = ({ show, setter }) => {
 
     return (
         <>
-            <div className={`${className}${appendClass} mt-[10rem] fixed flex flex-col justify-between `}>
+            <div className={`${className}${appendClass} mt-[112px] fixed flex flex-col justify-between `}>
                 <div className="flex flex-col">{navItems.map((item, index) => (
                     <MenuItem
                         key={index}

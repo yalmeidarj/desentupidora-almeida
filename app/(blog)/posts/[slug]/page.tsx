@@ -5,10 +5,10 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 
 import Avatar from "@/components/avatar";
-import CoverImage from "../../cover-image";
-import DateComponent from "../../date";
-import MoreStories from "../../more-stories";
-import PortableText from "../../portable-text";
+import CoverImage from "@/components/cover-image";
+import DateComponent from "@/components/date";
+import MoreStories from "@/components/more-stories";
+import PortableText from "@/components/portable-text";
 
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote/rsc'

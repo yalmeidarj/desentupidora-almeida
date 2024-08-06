@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-import Avatar from "../../components/avatar";
-import CoverImage from "./cover-image";
-import DateComponent from "./date";
+import Avatar from "@/components/avatar";
+import CoverImage from "@/components/cover-image";
+import DateComponent from "@/components/date";
 
 import type { MoreStoriesQueryResult } from "@/sanity.types";
 import { sanityFetch } from "@/sanity/lib/fetch";

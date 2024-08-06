@@ -16,10 +16,10 @@ async function getData() {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const data = await getData();
   
-
+  const urlBase = "http://desentupidorarenovo.com.br";
   
   const posts: MetadataRoute.Sitemap = data.map((post: SanityDocument) => ({
-    url: `http://desentupidorarenovo.com.br/posts/${post.currentSlug}`,
+    url: `${urlBase}/posts/${post.currentSlug}`,
     lastModified: post.updated,
     changeFrequency: "weekly",
     priority: 0.9,
@@ -27,63 +27,61 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
-      url: "http://desentupidorarenovo.com.br/",
+      url: `${urlBase}/`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: "http://desentupidorarenovo.com.br/blog",
+      url: `${urlBase}/blog`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
-
-    // Services
     {
-      url: "/desentupimentos/desentupimento-comercial",
+      url: `${urlBase}/desentupimentos/desentupimento-comercial`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "/desentupimentos/desentupimento-residencial",
+      url: `${urlBase}/desentupimentos/desentupimento-residencial`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "/desentupimentos/desentupimento-emergencial",
+      url: `${urlBase}/desentupimentos/desentupimento-emergencial`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "/desentupimentos/desentupimento-de-esgoto",
+      url: `${urlBase}/desentupimentos/desentupimento-de-esgoto`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "/desentupimentos/desentupimento-de-pia",
+      url: `${urlBase}/desentupimentos/desentupimento-de-pia`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "/desentupimentos/desentupimento-de-vaso-sanitario",
+      url: `${urlBase}/desentupimentos/desentupimento-de-vaso-sanitario`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "/desentupimentos/desentupimento-de-ralo-entupido",
+      url: `${urlBase}/desentupimentos/desentupimento-de-ralo-entupido`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: "/desentupimentos/desentupimento-de-caixa-de-gordura",
+      url: `${urlBase}/desentupimentos/desentupimento-de-caixa-de-gordura`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
