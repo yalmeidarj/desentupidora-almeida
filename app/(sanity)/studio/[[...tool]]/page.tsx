@@ -1,5 +1,5 @@
 import { NextStudio } from "next-sanity/studio";
-import AlertBanner from "@/app/(blog)/alert-banner";
+import AlertBanner from "@/components/alert-banner";
 import { VisualEditing } from "next-sanity";
 import { draftMode } from "next/headers";
 import config from "@/sanity.config";
