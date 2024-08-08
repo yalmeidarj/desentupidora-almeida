@@ -23,7 +23,6 @@ export default function Footer() {
                             className="rounded-full"
                         />
                     </Link>
-
                     <div className="flex items-center gap-3">
                         <Link href="tel:+552140421046" aria-label="Telefone" className="text-darkTheme-text bg-darkTheme-bg hover:bg-darkTheme-accent transition-colors duration-300 p-2 rounded" prefetch={false}>
                             <CiPhone className="h-5 w-5" />
@@ -78,7 +77,7 @@ function SubLink({ title, links }: SubLinkProps) {
             <h3 className="font-medium text-darkTheme-primary">{title}</h3>
             <nav className="space-x-3 my-3">
                 <ul>
-                    <li  className="flex flex-wrap">
+                    <li  className="flex flex-wrap gap-2">
                 {links.map((link) => (
                     <Link key={link.title} href={link.url} className=" text-lg text-darkTheme-text hover:text-darkTheme-outerWave transition-colors" prefetch={false}>
                         {link.title}

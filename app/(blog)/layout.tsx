@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import NavBar from "../../components/navBar/NavBar";
 import Footer from "../../components/footer/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Loading from "./loading";
 
 export async function generateMetadata(): Promise<Metadata> {
 
@@ -38,8 +39,8 @@ export default function Layout({
                 {/* {draftMode().isEnabled && <AlertBanner />} */}
                 <section className=" gap-4 min-h-screen flex flex-col justify-between">
                     <NavBar />
-                    <div className='pt-12 mt-[8rem]'>
-                        <Suspense>
+                    <div className='md:pt-8 md:mt-[10rem] pt-6 mt-[6rem]'>
+                        <Suspense fallback={<Loading />} >
                             {children}
                         </Suspense>
                     </div>

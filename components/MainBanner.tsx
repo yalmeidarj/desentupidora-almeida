@@ -8,7 +8,7 @@ const MainBanner = () => {
             <Image
                 // src="/desentupidora-confiavel-n.png"
                 src="/desentupidora-confiavel-n2.jpg"
-                alt="Plumber working"
+                alt="Técnico de desentupimento em ação"
                 // width={771}
                 // height={281}
                 width={968}

@@ -7,13 +7,15 @@ import CallLandLineButton from "@/components/CallLandLineButton";
 import { CiMail, CiPhone } from "react-icons/ci";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
+import MainSection from "@/components/mainSection";
 
 export default async function Page() {
 
   return (
     <main className="min-h-screen">      
       <div className=" flex flex-col items-center justify-center  ">
-      <MainBanner /> 
+        {/* <MainBanner />  */}
+        <MainSection />
       <ServicesSection />
         <SobreNos />
       </div>
@@ -66,4 +68,5 @@ const SobreNos: React.FC = () => {
     </section>
   );
 };
+
 

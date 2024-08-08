@@ -8,8 +8,9 @@ export default async function Page() {
             <ContentHeader
                 link={{ href: '/desentupimentos', label: 'Home', currentPage: 'Desentupimentos' }}
                 title={'Desentupimento Residencial'}
-                description={'Desentupimento residencial em residências, comércios e indústrias. Atendimento 24 horas em toda a região.'}
-            />            
+                description={'Desentupimento em residências, apartamentos, casas, condomínios, etc.\nQualquer tipo de entupimento doméstico, nós podemos ajudar!'}
+            /> 
+
         </div>
     )
 }

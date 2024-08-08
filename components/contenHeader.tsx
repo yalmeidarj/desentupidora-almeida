@@ -2,9 +2,21 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { FaHouse } from "react-icons/fa6";
 
-export default async function ContentHeader({ link, title, description, className }: { link: { label: string, href: string, currentPage: string}, title: string, description: string, className?: string }) {
+
+type ContentHeaderProps = {
+    title: string,
+    description: string,
+    link: {
+        label: string,
+        href: string,
+        currentPage: string
+    },
+    className?: string
+}
+
+export default async function ContentHeader({ link, title, description, className }: ContentHeaderProps) {
     return (
-        <div className={cn(className, 'mt-16')}>
+        <div className={cn(className, 'mt-4')}>
             <div className='w-full flex flex-row items-start gap-2'>
                 <div className='flex flex-row gap-2'>
                     <Link href={link.href} className='text-darkTheme-accent flex flex-row items-center gap-2'>

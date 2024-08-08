@@ -35,11 +35,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${urlBase}/blog`,
       lastModified: new Date(),
-      changeFrequency: "daily",
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${urlBase}/desentupimentos/desentupimento-comercial`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${urlBase}/desentupimentos`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
@@ -86,6 +92,42 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+
+    {
+      url: `${urlBase}/rj`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${urlBase}/rj/zona-norte-rj`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${urlBase}/rj/zona-sul-rj`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${urlBase}/rj/zona-oeste-rj`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${urlBase}/rj/centro-rj`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+
+
 
     ...posts,
   ];
