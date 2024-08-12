@@ -3,10 +3,62 @@ import CTA from "@/components/cta";
 import ServicesLink from "@/components/ServicesLink";
 import { areasDeAtendimento } from "@/lib/utils";
 import Link from "next/link";
+import { Service, BreadcrumbList, WithContext } from 'schema-dts';
+import Script from 'next/script';
+import { Metadata } from 'next';
+import { urlBase } from '@/lib/utils';
+
+const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'Desentupimentos em todo Rio de Janeiro',
+    description: 'Desentupimentos em todo Rio de Janeiro. A Desentupidora Renovo é especialista em desentupimentos em todo Rio de Janeiro. Atendimento 24 horas, chegamos em seu local rápido!',
+    provider: {
+        '@type': 'LocalBusiness',
+        name: 'Desentupidora Renovo',
+        address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Rua Bráulio Cordeiro',
+            addressLocality: 'Rio de Janeiro',
+            addressRegion: 'RJ',
+            addressCountry: 'BR'
+        },
+        telephone: '+55214042-1046'
+    }
+}, {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [{
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://desentupidorarenovo.com.br'
+    }, {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Áreas de Atendimento',
+        item: 'https://desentupidorarenovo.com.br/rj'
+    }]
+    }];
+
+export const metadata: Metadata = {
+    title: 'Desentupimentos em todo Rio de Janeiro | Desentupidora Renovo',
+    description: 'Desentupimentos em todo Rio de Janeiro. A Desentupidora Renovo é especialista em desentupimentos em todo Rio de Janeiro. Atendimento 24 horas, chegamos em seu local rápido!',
+    alternates: {
+        canonical: `${urlBase}/rj`,
+    },
+}
 
 export default async function Page() {
     return (
-        <section className='container flex flex-col justify-between gap-6 p-6 '>
+        <section className='container min-h-[80vw] md:min-h-[40vw]'>
+            <Script
+                strategy='lazyOnload'
+                type='application/ld+json'
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(jsonLd)
+                }}
+            />
             <ContentHeader
                 title='Onde atendemos'
                 description='Estamos preparados para atender todo Rio e Grande Rio. Veja abaixo a lista de regiões atendidas.'
