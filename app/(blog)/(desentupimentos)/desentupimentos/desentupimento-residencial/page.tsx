@@ -1,4 +1,5 @@
 import ContentHeader from "@/components/contenHeader";
+import DesentupimentoResidencial from "@/components/staticTexts/desentupimentoResidencial";
 
 export default async function Page() {
 
@@ -8,8 +9,9 @@ export default async function Page() {
             <ContentHeader
                 link={{ href: '/desentupimentos', label: 'Home', currentPage: 'Desentupimentos' }}
                 title={'Desentupimento Residencial'}
-                description={'Desentupimento em residências, apartamentos, casas, condomínios, etc.\nQualquer tipo de entupimento doméstico, nós podemos ajudar!'}
+                description={'Desentupimento em residências, apartamentos, casas, condomínios, etc. Qualquer tipo de entupimento doméstico, nós podemos ajudar!'}
             /> 
+            <DesentupimentoResidencial />
 
         </div>
     )

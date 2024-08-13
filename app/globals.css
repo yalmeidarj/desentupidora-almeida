@@ -64,6 +64,11 @@ body {
   color: hsl(var(--foreground));
 }
 
+p {
+ margin-bottom: 1rem;
+ text-height: 1.5; 
+}
+
 @layer base {
   * {
     @apply border-border;

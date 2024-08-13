@@ -8,6 +8,7 @@ import { CiMail, CiPhone } from "react-icons/ci";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa6";
 import MainSection from "@/components/mainSection";
+import RecentStories from "@/components/recentStories";
 
 export default async function Page() {
 
@@ -18,6 +19,7 @@ export default async function Page() {
         <MainSection />
       <ServicesSection />
         <SobreNos />
+        <RecentStories />
       </div>
     </main>
   );

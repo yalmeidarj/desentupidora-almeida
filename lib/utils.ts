@@ -14,9 +14,17 @@ export const servicesList = [
     title: "Desentupidora Residencial",
     url: "/desentupimentos/desentupimento-residencial",
   },
+  // {
+  //   title: "Desentupidora Emergencial",
+  //   url: "/desentupimentos/desentupimento-emergencial",
+  // },
   {
-    title: "Desentupidora Emergencial",
-    url: "/desentupimentos/desentupimento-emergencial",
+    title: "Desentupidora de sumidouro",
+    url: "/desentupimentos/desentupimento-de-sumidouro-rj",
+  },
+  {
+    title: "Limpeza de Fossa",
+    url: "/desentupimentos/limpeza-de-fossa",
   },
   {
     title: "Desentupidora de Caixa Esgoto",
@@ -57,7 +65,7 @@ type Area = {
 export const areasDeAtendimento: Area[] = [
   {
     zone: "Zona Sul",
-    link: "/rj/zona-sul-rj",
+    link: "/rj/desentupidora-zona-sul-rj",
     neighborhoods: [
       "Botafogo",
       "Catete",
@@ -79,7 +87,7 @@ export const areasDeAtendimento: Area[] = [
   },
   {
     zone: "Zona Oeste",
-    link: "/rj/zona-oeste-rj",
+    link: "/rj/desentupidora-zona-oeste-rj",
     neighborhoods: [
       "Bangu",
       "Barra da Tijuca",
@@ -118,7 +126,7 @@ export const areasDeAtendimento: Area[] = [
   },
   {
     zone: "Centro",
-    link: "/rj/centro-rj",
+    link: "/rj/desentupidora-centro-rj",
     neighborhoods: [
       "São Cristóvão",
       "Benfica",
@@ -133,7 +141,7 @@ export const areasDeAtendimento: Area[] = [
   },
   {
     zone: "Zona Norte",
-    link: "/rj/zona-norte-rj",
+    link: "/rj/desentupidora-zona-norte-rj",
     neighborhoods: [
       "Acari",
       "Alto da Boa Vista",
@@ -194,3 +202,5 @@ export const areasDeAtendimento: Area[] = [
     ],
   },
 ];
+
+export const urlBase = "https://desentupidorarenovo.com.br";

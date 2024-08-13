@@ -16,7 +16,8 @@ type ContentHeaderProps = {
 
 export default async function ContentHeader({ link, title, description, className }: ContentHeaderProps) {
     return (
-        <div className={cn(className, 'mt-4')}>
+        <>
+        <div className={cn(className, 'my-4 ')}>
             <div className='w-full flex flex-row items-start gap-2'>
                 <div className='flex flex-row gap-2'>
                     <Link href={link.href} className='text-darkTheme-accent flex flex-row items-center gap-2'>
@@ -33,6 +34,7 @@ export default async function ContentHeader({ link, title, description, classNam
             <h1 className="text-4xl font-bold">{title}</h1>
             <p className="text-xl text-gray-600 font-semibold ">{description}</p>
         </div>
+        </>
     )
 
 }

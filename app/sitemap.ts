@@ -39,13 +39,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1,
     },
     {
-      url: `${urlBase}/desentupimentos/desentupimento-comercial`,
+      url: `${urlBase}/desentupimentos`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
+
     {
-      url: `${urlBase}/desentupimentos`,
+      url: `${urlBase}/desentupimentos/desentupimento-comercial`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
@@ -62,6 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+
     {
       url: `${urlBase}/desentupimentos/desentupimento-de-esgoto`,
       lastModified: new Date(),
@@ -94,40 +96,63 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
 
     {
+      url: `${urlBase}/desentupimentos/limpeza-de-fossa/`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${urlBase}/desentupimentos/limpeza-de-sumidouro-rj`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${urlBase}/desentupimentos/desentupimento-em-condominios`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${urlBase}/desentupimentos/desentupimento-de-agua-potavel`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+
+    {
       url: `${urlBase}/rj`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
-      url: `${urlBase}/rj/zona-norte-rj`,
+      url: `${urlBase}/rj/desentupidora-zona-norte-rj`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
 
     {
-      url: `${urlBase}/rj/zona-sul-rj`,
+      url: `${urlBase}/rj/desentupidora-zona-sul-rj`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
 
     {
-      url: `${urlBase}/rj/zona-oeste-rj`,
+      url: `${urlBase}/rj/desentupidora-zona-oeste-rj`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
 
     {
-      url: `${urlBase}/rj/centro-rj`,
+      url: `${urlBase}/rj/desentupidora-centro-rj`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.9,
     },
-
-
 
     ...posts,
   ];

@@ -10,8 +10,7 @@ import DateComponent from "@/components/date";
 import MoreStories from "@/components/more-stories";
 import PortableText from "@/components/portable-text";
 
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote/rsc'
+import { WithContext, Article } from "schema-dts";
 
 import type {
   PostQueryResult,
@@ -22,6 +21,7 @@ import * as demo from "@/sanity/lib/demo";
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { postQuery, settingsQuery } from "@/sanity/lib/queries";
 import { resolveOpenGraphImage } from "@/sanity/lib/utils";
+import Script from "next/script";
 
 type Props = {
   params: { slug: string };
@@ -54,11 +54,51 @@ export async function generateMetadata(
     authors: post?.author?.name ? [{ name: post?.author?.name }] : [],
     title: post?.title,
     description: post?.excerpt,
+    keywords: ['desentupidora', 'desentupimento', 'desentupidora rj'],
+    alternates: {
+      canonical: post?.slug,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
     openGraph: {
       images: ogImage ? [ogImage, ...previousImages] : previousImages,
     },
   } satisfies Metadata;
 }
+
+
+
+const generateArticleSchema = (post: PostQueryResult | null): WithContext<Article> => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": post?.title || "Default Title",
+    "description": post?.excerpt || "Default description.",
+    "datePublished": post?.date || "2024-01-01",
+    "dateModified": post?.date || "2024-01-01",
+    "author": {
+      "@type": "Person",
+      "name": post?.author?.name || "Unknown",
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Desentupidora Renovo",
+      // "logo": {
+      //   "@type": "ImageObject",
+      //   "url": "https://yourdomain.com/logo.png",
+      // }
+    },
+    "image": post?.coverImage?.asset?._ref || "https://yourdomain.com/default-image.jpg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://desentupidorarenovo/posts/${post?.slug || "default-slug"}`
+    }
+  };
+};
+
+
 
 export default async function PostPage({ params }: Props) {
   const [post, settings] = await Promise.all([
@@ -74,14 +114,17 @@ export default async function PostPage({ params }: Props) {
   if (!post?._id) {
     return notFound();
   }
+  const jsonLd = generateArticleSchema(post);
 
   return (
     <div className="container mx-auto px-5">
-      {/* <h2 className="mb-16 mt-10 text-2xl font-bold leading-tight tracking-tight md:text-4xl md:tracking-tighter">
-        <Link href="/" className="hover:underline">
-          {settings?.title || demo.title}
-        </Link>
-      </h2> */}
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
       <article>
         <h1 className="text-balance mb-12 text-4xl font-bold leading-tight tracking-tighter md:text-7xl md:leading-none lg:text-8xl">
           {post.title}
