@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Service, BreadcrumbList, WithContext } from 'schema-dts';
 import Script from 'next/script';
 import { Metadata } from 'next';
-import { urlBase } from '@/lib/utils';
 
 const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
     '@context': 'https://schema.org',
@@ -45,7 +44,7 @@ export const metadata: Metadata = {
     title: 'Desentupimentos em todo Rio de Janeiro | Desentupidora Renovo',
     description: 'Desentupimentos em todo Rio de Janeiro. A Desentupidora Renovo é especialista em desentupimentos em todo Rio de Janeiro. Atendimento 24 horas, chegamos em seu local rápido!',
     alternates: {
-        canonical: `${urlBase}/rj`,
+        canonical: `https://desentupidorarenovo.com.br/rj`,
     },
 }
 

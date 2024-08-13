@@ -4,7 +4,6 @@ import ZoneDescription from "@/components/ZoneDescription";
 import { areasDeAtendimento } from "@/lib/utils";
 import Script from 'next/script';
 import { Metadata } from 'next';
-import { urlBase } from '@/lib/utils';
 import { WithContext, Service, BreadcrumbList } from "schema-dts";
 
 const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
@@ -45,7 +44,7 @@ const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
         }]
 }];
     
-
+const urlBase = 'https://desentupidorarenovo.com.br';
 export const metadata: Metadata = {
     title: 'Desentupimento no Centro RJ | Desentupidora Renovo',
     description: 'Desentupimentos no Centro do Rio. A Desentupidora Renovo é especialista em desentupimentos no Centro RJ. Atendimento 24 horas, chegamos em seu local rápido!',

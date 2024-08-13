@@ -6,7 +6,6 @@ import { areasDeAtendimento } from "@/lib/utils";
 import { Service, BreadcrumbList, WithContext } from 'schema-dts';
 import Script from 'next/script';
 import { Metadata } from 'next';
-import { urlBase } from '@/lib/utils';
 
 const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
     '@context': 'https://schema.org',
@@ -45,6 +44,8 @@ const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
         item: 'https://desentupidorarenovo.com.br/rj/desentupidora-zona-oeste-rj'
     }]
     }];
+
+const urlBase = 'https://desentupidorarenovo.com.br';
 
 export const metadata: Metadata = {
     title: 'Desentupimento na Zona Oeste RJ | Desentupidora Renovo',
