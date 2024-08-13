@@ -83,7 +83,8 @@ export default async function Page() {
 
     return (
         <>
-        <Script
+            <Script
+                id="my-inline-script"
                 strategy="lazyOnload"
             type="application/ld+json"
             dangerouslySetInnerHTML={{

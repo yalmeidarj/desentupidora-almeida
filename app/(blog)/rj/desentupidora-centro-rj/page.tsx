@@ -61,6 +61,7 @@ export default async function Page() {
     return (
         <div className='container min-h-[80vw] md:min-h-[40vw]'>
             <Script
+                id="my-inline-script"
                 strategy="lazyOnload"
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
