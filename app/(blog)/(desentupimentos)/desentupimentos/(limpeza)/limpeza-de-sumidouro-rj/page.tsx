@@ -5,7 +5,6 @@ import TextLink from "@/components/textLink";
 import { Service, BreadcrumbList, WithContext } from 'schema-dts';
 import Script from 'next/script';
 import { Metadata } from 'next';
-import { urlBase } from '@/lib/utils';
 
 const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
     '@context': 'https://schema.org',
@@ -45,7 +44,7 @@ const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
     }]
     }];
 
-const urlBase = 'https://desentupidorarenovo.com.br';
+
 export const metadata: Metadata = {
     title: 'Desentupimento de Sumidouro | Desentupidora Renovo',
     description: 'Desentupimento de sumidouro é essencial para manter o bom funcionamento do sistema e evitar problemas de contaminação do solo e da água.',
@@ -58,6 +57,7 @@ export default async function Page() {
     return (
         <div className='container min-h-[80vw] md:min-h-[40vw]'>
             <Script
+                id="json-ld"
                 strategy='lazyOnload'
                 type='application/ld+json'
                 dangerouslySetInnerHTML={{
