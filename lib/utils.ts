@@ -20,7 +20,7 @@ export const servicesList = [
   // },
   {
     title: "Desentupidora de sumidouro",
-    url: "/desentupimentos/desentupimento-de-sumidouro-rj",
+    url: "/desentupimentos/limpeza-de-sumidouro-rj",
   },
   {
     title: "Limpeza de Fossa",
@@ -54,7 +54,6 @@ export const servicesList = [
     title: "Desentupidora de Água potável",
     url: "/desentupimentos/desentupimento-de-agua-potavel",
   },
-
 ];
 
 type Area = {

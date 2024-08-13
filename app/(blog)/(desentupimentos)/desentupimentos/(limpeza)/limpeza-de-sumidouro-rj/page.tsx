@@ -79,13 +79,13 @@ export default async function Page() {
                         Para prevenir esses problemas, a <TextLink href="/desentupimentos/limpeza-de-sumidouros">limpeza regular dos sumidouros</TextLink> é fundamental. Esse procedimento, quando realizado corretamente, inclui também a <TextLink href="/desentupimentos/desentupimento-de-caixa-de-gordura">limpeza das canalizações conectadas</TextLink>, garantindo o bom funcionamento de todo o sistema.
                     </p>
                     <p>
-                        Após a primeira limpeza, é normal que o intervalo até o próximo enchimento da fossa seja menor do que o período inicial. Por isso, é importante não esperar que o entupimento aconteça. Entre em contato com a <TextLink href="/">Desentupidora Renovo</TextLink> e agende uma <TextLink href="/desentupidora-visita-tecnica">visita</TextLink> para esvaziar e higienizar seu sumidouro.
+                        Após a primeira limpeza, é normal que o intervalo até o próximo enchimento da fossa seja menor do que o período inicial. Por isso, é importante não esperar que o entupimento aconteça. Entre em contato com a <TextLink href="/">Desentupidora Renovo</TextLink> e agende uma visita para esvaziar e higienizar seu sumidouro.
                     </p>
                     <p>
                         Atendemos em todas as regiões do Rio de Janeiro, incluindo a <TextLink href="/rj/desentupidora-zona-oeste-rj">Barra da Tijuca</TextLink>, oferecendo nossos serviços para diversos segmentos, como comércios, indústrias e residências.
                     </p>
                     <p>
-                        Além da <TextLink href="/desentupimentos/limpeza-de-fossa">limpeza de fossas sépticas</TextLink> e <TextLink href="/desentupimentos/desentupimento-de-esgoto">desentupimento de esgoto</TextLink>, disponibilizamos contratos de <TextLink href="/desentupimentos/manutencao-preventiva">manutenção periódica</TextLink> para aqueles que necessitam de serviços regulares, garantindo tranquilidade e eficiência contínua.
+                        Além da <TextLink href="/desentupimentos/limpeza-de-fossa">limpeza de fossas sépticas</TextLink> e <TextLink href="/desentupimentos/desentupimento-de-esgoto">desentupimento de esgoto</TextLink>, disponibilizamos contratos de manutenção periódica para aqueles que necessitam de serviços regulares, garantindo tranquilidade e eficiência contínua.
                     </p>
 
                     <CTA 
