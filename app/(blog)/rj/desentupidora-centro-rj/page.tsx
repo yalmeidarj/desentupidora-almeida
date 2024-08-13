@@ -4,7 +4,7 @@ import ZoneDescription from "@/components/ZoneDescription";
 import { areasDeAtendimento } from "@/lib/utils";
 import Script from 'next/script';
 import { Metadata } from 'next';
-import { WithContext, Service, BreadcrumbList } from "schema-dts";
+import { BreadcrumbList, Service, WithContext } from "schema-dts";
 
 const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
     '@context': 'https://schema.org',
