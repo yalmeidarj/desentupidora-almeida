@@ -53,7 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
             template: `%s | Desentupidora Renovo`,
             default: 'Desentupimento na Zona Sul RJ',
         },
-        description: "Desentupimentos em Botafogo, Lagoa, Leblon, Copacabana, Ipanema e mais. Desentupidora Renovo, 24h na Zona Sul do Rio.",
+        description: "Desentupidora em Botafogo, Lagoa, Leblon, Copacabana, Ipanema e mais. Desentupidora Renovo, 24h na Zona Sul do Rio.",
         robots: {
             index: true,
             follow: true,
@@ -99,7 +99,7 @@ export default async function Page() {
             />
             <ServicesLink />
             <ZoneDescription
-                descritption="Conheçemos as peculiariades de cada bairro da Zona Sul, nossos técnicos já realizram inúmeros serviços de desentupimento na região. Por isso, podemos garantir um atendimento rápido e eficiente, sem sujeira e com garantia de satisfação."
+                descritption="Conheçemos as peculiariades de cada bairro da Zona Sul, nossos técnicos já realizaram inúmeros serviços de desentupimento na região. Por isso, podemos garantir um atendimento rápido e eficiente, sem sujeira e com garantia de satisfação."
                 neighborhoods={neighborhoods}
                 />
         </div>

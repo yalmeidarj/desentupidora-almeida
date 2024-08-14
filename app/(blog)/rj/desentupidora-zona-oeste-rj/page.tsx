@@ -71,7 +71,7 @@ export default async function Page() {
             />
             <ContentHeader
                 title='Zona Oeste RJ'
-                description='Desentupimentos na Zona Oeste do Rio. A Desentupidora Renovo é especialista em desentupimentos na Zona Oeste RJ. Atendimento 24 horas, chegamos em seu local rápido!'
+                description='Com vasta experiência na Zona Oeste do Rio de Janeiro, conhecemos as especificidades de bairros como Barra da Tijuca, Recreio dos Bandeirantes e Campo Grande. Nossa equipe já realizou inúmeros desentupimentos nessa região, sempre com a preocupação de oferecer um serviço rápido, limpo e eficiente. Se você busca uma desentupidora na Zona Oeste, pode contar com a Desentupidora Renovo para um atendimento de qualidade e com total garantia de satisfação.'
                 link={{ href: '/rj', label: 'Rio de Janeiro', currentPage: 'Áreas de Atendimento' }}
             />
             <ServicesLink />
