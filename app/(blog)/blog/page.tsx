@@ -47,7 +47,7 @@ function HeroPost({
     return (
         <article>
             <h1 className="text-balance text-3xl text-darkTheme-bg mb-2 font-bold leading-tight tracking-tighter lg:pr-8 lg:text-6xl lg:mb-6">
-                Blog Desentupidora Renova
+                Blog Desentupidora Renovo
             </h1>
             <Link className="group mb-8 block md:mb-16" href={`/posts/${slug}`}>
                 <CoverImage image={coverImage} priority />
