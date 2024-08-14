@@ -7,9 +7,9 @@ import Footer from "../../components/footer/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Loading from "./loading";
 import Script from "next/script";
-import { WithContext, LocalBusiness } from "schema-dts";
+import { WithContext, LocalBusiness, Organization } from "schema-dts";
 
-const jsonLd: WithContext<LocalBusiness> = {
+const jsonLd: WithContext<LocalBusiness | Organization>[] = [{
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Desentupidora Renovo",
@@ -27,10 +27,34 @@ const jsonLd: WithContext<LocalBusiness> = {
     "openingHours": "Mo-Su 00:00-23:59",
     "sameAs": [
         "https://x.com/desentupirenovo"
-    ],
-    "logo": "/logo-desentupidora-light.png",
+    ],    
+    "logo": "https://desentupidorarenovo.com.br/api/logo-desentupidora-renovo",
     "priceRange": "$"
-};
+}, {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Desentupidora Renovo",
+    "url": "https://desentupidorarenovo.com.br",
+    "logo": "https://desentupidorarenovo.com.br/api/logo-desentupidora-renovo",
+    "sameAs": [
+        "https://x.com/desentupirenovo"
+    ],
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Bráulio Cordeiro",
+        "addressLocality": "Rio de Janeiro",
+        "addressRegion": "RJ",
+        "postalCode": "20975-090",
+        "addressCountry": "BR"
+    },
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55 21 4042-1046",
+        "contactType": "customer service"
+    },
+    "description": "A Desentupidora Renovo oferece serviços profissionais de desentupimento para residências e comércios, incluindo atendimento emergencial 24 horas no Rio de Janeiro.",
+
+}];
 
 export async function generateMetadata(): Promise<Metadata> {
 
