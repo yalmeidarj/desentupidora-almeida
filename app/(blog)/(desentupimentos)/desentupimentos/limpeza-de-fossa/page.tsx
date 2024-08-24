@@ -46,7 +46,7 @@ const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
     }
 ];
 
-const urlBase = 'https://desentupidorarenovo.com.br';
+
 export async function generateMetadata(): Promise<Metadata> {
     return {
         title: {
