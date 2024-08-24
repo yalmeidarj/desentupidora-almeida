@@ -59,7 +59,7 @@ export async function generateMetadata(): Promise<Metadata> {
             follow: true,
         },
         alternates: {
-            canonical: `${urlBase}/rj/zona-sul-rj`,
+            canonical: `${urlBase}/rj/desentupidora-zona-sul-rj`,
         },
         // openGraph: {
         //     images: [

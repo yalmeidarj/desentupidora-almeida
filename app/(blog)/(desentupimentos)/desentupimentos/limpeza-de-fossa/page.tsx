@@ -43,7 +43,26 @@ const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
         name: 'Desentupimento de Sumidouro',
         item: 'https://desentupidorarenovo.com.br/desentupimentos/limpeza-de-fossa-rj'
     }]
-    }];
+    }
+];
+
+const urlBase = 'https://desentupidorarenovo.com.br';
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: {
+            template: `%s | Desentupidora Renovo`,
+            default: 'Desentupimento de Fossa',
+        },
+        description: 'Desentupimento de fossa é essencial para manter o bom funcionamento do sistema e evitar problemas de contaminação do solo e da água.',
+        robots: {
+            index: true,
+            follow: true,
+        },
+        alternates: {
+            canonical: `${urlBase}/desentupimentos/limpeza-de-fossa`,
+        },
+    };
+}
 
 export default async function Page() {
     return (
