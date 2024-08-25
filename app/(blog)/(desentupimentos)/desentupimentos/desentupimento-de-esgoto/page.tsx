@@ -20,7 +20,7 @@ const jsonLd: WithContext<Service> = {
             addressRegion: 'RJ',            
             addressCountry: 'BR'
         },
-        telephone: '+55214042-1046',        
+        telephone: ["+55 21 4042-1046", "+55 21 98883-5428"],        
     }
 }
 

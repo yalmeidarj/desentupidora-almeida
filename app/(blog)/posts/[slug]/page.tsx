@@ -85,10 +85,7 @@ const generateArticleSchema = (post: PostQueryResult | null): WithContext<Articl
     "publisher": {
       "@type": "Organization",
       "name": "Desentupidora Renovo",
-      // "logo": {
-      //   "@type": "ImageObject",
-      //   "url": "https://yourdomain.com/logo.png",
-      // }
+
     },
     "image": post?.coverImage?.asset?._ref || "https://yourdomain.com/default-image.jpg",
     "mainEntityOfPage": {

@@ -15,7 +15,7 @@ const jsonLd: WithContext<Service | BreadcrumbList>[] = [{
         "@type": "LocalBusiness",
         "name": "Desentupidora Renovo",
         "url": "https://desentupidorarenovo.com.br",
-        "telephone": "+55 21 4042-1046",
+        "telephone": ["+55 21 4042-1046", "+55 21 98883-5428"],
 
     },
     "areaServed": {

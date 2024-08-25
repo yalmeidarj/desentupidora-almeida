@@ -1,10 +1,13 @@
 "use client";
 import { FaWhatsapp } from 'react-icons/fa';
-import {cn} from '../lib/utils';
+import { cn } from '../lib/utils';
 
 function WhatsAppButton() {
     const handleWhatsApp = () => {
-        window.location.href = "https://wa.me/5521966495454";
+        const message = "Olá, preciso de ajuda com desentupimento!";
+        const phoneNumber = "5521988835428";
+        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.location.href = url;
     };
 
     return (
@@ -18,8 +21,7 @@ function WhatsAppButton() {
             onClick={handleWhatsApp}
             aria-label="Open WhatsApp"
         >
-            <FaWhatsapp size={36} aria-hidden="true"  />
-
+            <FaWhatsapp size={36} aria-hidden="true" />
         </button>
     );
 }

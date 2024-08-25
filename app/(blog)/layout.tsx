@@ -15,7 +15,7 @@ const jsonLd: WithContext<LocalBusiness | Organization>[] = [{
     "name": "Desentupidora Renovo",
     "description": "A Desentupidora Renovo oferece serviços profissionais de desentupimento para residências e comércios, incluindo atendimento emergencial 24 horas no Rio de Janeiro.",
     "url": "https://desentupidorarenovo.com.br",
-    "telephone": "+55 21 4042-1046",
+    "telephone": ["+55 21 4042-1046","+55 21 98883-5428"], 
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Bráulio Cordeiro",
@@ -49,7 +49,7 @@ const jsonLd: WithContext<LocalBusiness | Organization>[] = [{
     },
     "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+55 21 4042-1046",
+        "telephone": ["+55 21 4042-1046", "+55 21 98883-5428"],
         "contactType": "customer service"
     },
     "description": "A Desentupidora Renovo oferece serviços profissionais de desentupimento para residências e comércios, incluindo atendimento emergencial 24 horas no Rio de Janeiro.",
