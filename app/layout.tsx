@@ -10,6 +10,25 @@ export default function RootLayout({
         <html lang="pt-BR" >
             <head>
                 {/* Google Tag Manager */}
+
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-Y5DKXHSZ0Y"
+                    strategy="afterInteractive"
+                    async
+                />
+
+                {/* Inline script to initialize gtag */}
+                <Script id="gtag-init" strategy="afterInteractive">
+                    {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          
+          gtag('config', 'G-Y5DKXHSZ0Y');
+        `}
+                </Script>
+
+                {/* Legacy Google Tag Manager */}
                 <Script
                     id="gtm-script"
                     strategy="afterInteractive"
